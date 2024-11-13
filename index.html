@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StickerRoo is coming soon! Sign up now to be one of the first to get notified and receive a free sticker pack.">
+    <meta name="keywords" content="StickerRoo, stickers, Gen Z, sticker packs, launch notification">
+    <title>StickerRoo - Coming Soon</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CJWNPHM8N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0CJWNPHM8N');
+    </script>
+    <!-- reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <img src="StickerRoo12.png" alt="StickerRoo Logo" class="logo">
+        <h1>Get Ready to Stick with Style!</h1>
+        <p>Be one of the first 500 to sign up and get a free sticker pack of your choice when we launch.</p>
+
+        <form action="https://your-backend-endpoint.com" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="year_of_birth">Year of Birth:</label>
+            <input type="number" id="year_of_birth" name="year_of_birth" required>
+
+            <label for="favorite_sticker_pack">What would be your favorite sticker pack?</label>
+            <input type="text" id="favorite_sticker_pack" name="favorite_sticker_pack" required>
+
+            <div class="g-recaptcha" data-sitekey="6LflwH0qAAAAAPFu82uXXJNarLAGxEjxm3aLKtVS"></div>
+
+            <button type="submit">Sign Up for Early Access</button>
+        </form>
+    </div>
+</body>
+</html>
