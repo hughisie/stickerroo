@@ -11,6 +11,8 @@
 </head>
 <body>
     <div class="container">
+        <img src="StickerRoo12.png" alt="StickerRoo Logo" class="logo">
+
         <nav class="navbar">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -33,6 +35,7 @@
         <h2>Will StickerRoo stickers be available on multiple platforms like WhatsApp, Telegram, and Instagram?</h2>
         <p>Yes! Our stickers are designed to be compatible across major messaging platforms like WhatsApp, Telegram, and Instagram.</p>
 
+        <!-- Capture Form -->
         <form action="https://formspree.io/f/xqakbwrn" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -73,5 +76,17 @@
             <button type="submit">Sign Up for Early Access</button>
         </form>
     </div>
+
+    <script>
+        function toggleOtherInput() {
+            const favoriteStickerPack = document.getElementById('favorite_sticker_pack');
+            const otherInput = document.getElementById('other_sticker_pack');
+            if (favoriteStickerPack.value === 'Other') {
+                otherInput.style.display = 'block';
+            } else {
+                otherInput.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
