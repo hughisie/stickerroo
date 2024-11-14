@@ -28,23 +28,23 @@
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
             <label for="year_of_birth">Year of Birth:</label>
-            <select id="year_of_birth" name="year_of_birth" required>
-                <!-- Populating dropdown with years dynamically from 1900 to current year -->
-                <script>
-                    const yearSelect = document.getElementById('year_of_birth');
-                    const currentYear = new Date().getFullYear();
-                    for (let year = 1900; year <= currentYear; year++) {
-                        const option = document.createElement('option');
-                        option.value = year;
-                        option.textContent = year;
-                        yearSelect.appendChild(option);
-                    }
-                </script>
-            </select>
+<select id="year_of_birth" name="year_of_birth" required>
+    <!-- JavaScript code to populate the years and set the current year as default -->
+    <script>
+        const yearSelect = document.getElementById('year_of_birth');
+        const currentYear = new Date().getFullYear();
+        for (let year = 1900; year <= currentYear; year++) {
+            const option = document.createElement('option');
+            option.value = year;
+            option.textContent = year;
+            if (year === currentYear) {
+                option.selected = true; // Set current year as the default
+            }
+            yearSelect.appendChild(option);
+        }
+    </script>
+</select>
 
             <label for="favorite_sticker_pack">What would be your favorite sticker pack?</label>
             <select id="favorite_sticker_pack" name="favorite_sticker_pack" onchange="toggleOtherInput()" required>
