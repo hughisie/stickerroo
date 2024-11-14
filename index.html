@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +24,7 @@
         <h1>Get Ready to Stick with Style!</h1>
         <p>Be one of the first 500 to sign up and get a free sticker pack of your choice when we launch.</p>
 
-        <form action="https://your-backend-endpoint.com" method="POST">
+        <form action="https://formspree.io/f/xqakbwrn" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -33,15 +32,49 @@
             <input type="email" id="email" name="email" required>
 
             <label for="year_of_birth">Year of Birth:</label>
-            <input type="number" id="year_of_birth" name="year_of_birth" required>
+            <select id="year_of_birth" name="year_of_birth" required>
+                <!-- Populating dropdown with years dynamically from 1900 to current year -->
+                <script>
+                    const yearSelect = document.getElementById('year_of_birth');
+                    const currentYear = new Date().getFullYear();
+                    for (let year = 1900; year <= currentYear; year++) {
+                        const option = document.createElement('option');
+                        option.value = year;
+                        option.textContent = year;
+                        yearSelect.appendChild(option);
+                    }
+                </script>
+            </select>
 
             <label for="favorite_sticker_pack">What would be your favorite sticker pack?</label>
-            <input type="text" id="favorite_sticker_pack" name="favorite_sticker_pack" required>
+            <select id="favorite_sticker_pack" name="favorite_sticker_pack" onchange="toggleOtherInput()" required>
+                <option value="Celebrity">Celebrity</option>
+                <option value="Video Games">Video Games</option>
+                <option value="Sports">Sports</option>
+                <option value="TV & Movies">TV & Movies</option>
+                <option value="Comics">Comics</option>
+                <option value="Other">Other</option>
+            </select>
+            <!-- Conditional input field for "Other" option -->
+            <input type="text" id="other_sticker_pack" name="other_sticker_pack" placeholder="Specify other" style="display: none;">
 
             <div class="g-recaptcha" data-sitekey="6LflwH0qAAAAAPFu82uXXJNarLAGxEjxm3aLKtVS"></div>
 
             <button type="submit">Sign Up for Early Access</button>
         </form>
     </div>
+
+    <script>
+        // JavaScript to show/hide "Other" input field based on dropdown selection
+        function toggleOtherInput() {
+            const favoriteStickerPack = document.getElementById('favorite_sticker_pack');
+            const otherInput = document.getElementById('other_sticker_pack');
+            if (favoriteStickerPack.value === 'Other') {
+                otherInput.style.display = 'block';
+            } else {
+                otherInput.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
