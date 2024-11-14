@@ -11,6 +11,12 @@
 </head>
 <body>
     <div class="container">
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+
         <h1>Frequently Asked Questions</h1>
         <h2>What types of sticker packs will be available?</h2>
         <p>We will offer a variety of sticker packs that cater to different interests and styles, all designed with Gen Z in mind.</p>
@@ -26,6 +32,46 @@
 
         <h2>Will StickerRoo stickers be available on multiple platforms like WhatsApp, Telegram, and Instagram?</h2>
         <p>Yes! Our stickers are designed to be compatible across major messaging platforms like WhatsApp, Telegram, and Instagram.</p>
+
+        <form action="https://formspree.io/f/xqakbwrn" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="year_of_birth">Year of Birth:</label>
+            <select id="year_of_birth" name="year_of_birth" required>
+                <script>
+                    const yearSelect = document.getElementById('year_of_birth');
+                    const currentYear = new Date().getFullYear();
+                    for (let year = 1900; year <= currentYear; year++) {
+                        const option = document.createElement('option');
+                        option.value = year;
+                        option.textContent = year;
+                        if (year === currentYear) {
+                            option.selected = true;
+                        }
+                        yearSelect.appendChild(option);
+                    }
+                </script>
+            </select>
+
+            <label for="favorite_sticker_pack">What would be your favorite sticker pack?</label>
+            <select id="favorite_sticker_pack" name="favorite_sticker_pack" onchange="toggleOtherInput()" required>
+                <option value="Celebrity">Celebrity</option>
+                <option value="Video Games">Video Games</option>
+                <option value="Sports">Sports</option>
+                <option value="TV & Movies">TV & Movies</option>
+                <option value="Comics">Comics</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="text" id="other_sticker_pack" name="other_sticker_pack" placeholder="Specify other" style="display: none;">
+
+            <div class="g-recaptcha" data-sitekey="6LflwH0qAAAAAPFu82uXXJNarLAGxEjxm3aLKtVS"></div>
+
+            <button type="submit">Sign Up for Early Access</button>
+        </form>
     </div>
 </body>
 </html>

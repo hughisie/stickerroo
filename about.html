@@ -5,15 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn more about StickerRoo and our mission to provide fun, trendy, and personalized sticker packs.">
-    <meta name="keywords" content="StickerRoo, stickers, Gen Z, sticker packs, About Us">
+    <meta name="keywords" content="StickerRoo, stickers, Gen Z, sticker packs, About Us, premium stickers, celebrities, sports teams, games, films, comics">
     <title>About Us - StickerRoo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+
         <h1>About StickerRoo</h1>
-        <p>StickerRoo is all about bringing fun, trendy, and personalized sticker packs to the digital world. Our mission is to create unique sticker packs that resonate with Gen Z, combining creativity and relevance in every design.</p>
-        <p>With StickerRoo, you’ll have access to an exciting range of stickers, designed to suit every style and preference. Join us as we gear up for our big launch and stick around for amazing sticker collections!</p>
+        <p>Welcome to <strong>StickerRoo</strong> – your ultimate destination for premium, hand-crafted stickers that bring your personality to life! At StickerRoo, we believe that stickers are a fun and expressive way to communicate, and we're here to make sure you have the best ones available. Here’s what sets us apart:</p>
+
+        <ul>
+            <li><strong>Quality:</strong> We offer <em>premium-quality</em> stickers with vibrant designs and lasting appeal, perfect for any conversation.</li>
+            <li><strong>Hand-Crafted Collections:</strong> Each sticker pack is carefully designed to capture the essence of what you love most.</li>
+            <li><strong>Wide Variety:</strong> Choose from a diverse range of themes and categories that resonate with all interests, including:</li>
+            <ul>
+                <li><strong>Celebrity Stickers:</strong> Express your admiration with stickers featuring your favorite stars from music, film, and beyond.</li>
+                <li><strong>Sports Team Stickers:</strong> Support your favorite sports teams with stickers that capture the spirit of the game.</li>
+                <li><strong>Gaming Stickers:</strong> From retro classics to modern hits, our gaming stickers let you share your favorite in-game moments.</li>
+                <li><strong>Movie & TV Stickers:</strong> Relive iconic scenes and quotes from beloved movies and shows.</li>
+                <li><strong>Comic Stickers:</strong> Show off your love for comics with stickers of iconic characters and memorable frames.</li>
+            </ul>
+            <li><strong>Gen Z Focus:</strong> Our designs are trendy, relatable, and created with Gen Z interests in mind.</li>
+            <li><strong>Regular Updates:</strong> New sticker packs are released frequently to keep up with the latest trends and seasons.</li>
+            <li><strong>Multi-Platform Compatibility:</strong> Our stickers are optimized for use across major platforms like WhatsApp, Telegram, Instagram, and more.</li>
+        </ul>
+
+        <p>Join the StickerRoo community today and bring your chats to life! Sign up below to be among the first to know about our launch and access exclusive early sign-up benefits. Let your personality shine with stickers that speak to you!</p>
+
+        <!-- Capture Form -->
+        <form action="https://formspree.io/f/xqakbwrn" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="year_of_birth">Year of Birth:</label>
+            <select id="year_of_birth" name="year_of_birth" required>
+                <script>
+                    const yearSelect = document.getElementById('year_of_birth');
+                    const currentYear = new Date().getFullYear();
+                    for (let year = 1900; year <= currentYear; year++) {
+                        const option = document.createElement('option');
+                        option.value = year;
+                        option.textContent = year;
+                        if (year === currentYear) {
+                            option.selected = true;
+                        }
+                        yearSelect.appendChild(option);
+                    }
+                </script>
+            </select>
+
+            <label for="favorite_sticker_pack">What would be your favorite sticker pack?</label>
+            <select id="favorite_sticker_pack" name="favorite_sticker_pack" onchange="toggleOtherInput()" required>
+                <option value="Celebrity">Celebrity</option>
+                <option value="Video Games">Video Games</option>
+                <option value="Sports">Sports</option>
+                <option value="TV & Movies">TV & Movies</option>
+                <option value="Comics">Comics</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="text" id="other_sticker_pack" name="other_sticker_pack" placeholder="Specify other" style="display: none;">
+
+            <div class="g-recaptcha" data-sitekey="6LflwH0qAAAAAPFu82uXXJNarLAGxEjxm3aLKtVS"></div>
+
+            <button type="submit">Sign Up for Early Access</button>
+        </form>
     </div>
+
+    <script>
+        function toggleOtherInput() {
+            const favoriteStickerPack = document.getElementById('favorite_sticker_pack');
+            const otherInput = document.getElementById('other_sticker_pack');
+            if (favoriteStickerPack.value === 'Other') {
+                otherInput.style.display = 'block';
+            } else {
+                otherInput.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
