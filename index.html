@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,6 @@
     <meta name="keywords" content="StickerRoo, stickers, premium stickers, messaging, sticker packs, handmade stickers">
     <title>StickerRoo - Coming Soon</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CJWNPHM8N"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -15,25 +15,20 @@
       gtag('js', new Date());
       gtag('config', 'G-0CJWNPHM8N');
     </script>
-    <!-- reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <div class="container">
-        <!-- Navigation links to About and FAQ pages -->
         <nav class="navbar">
+            <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="faq.html">FAQ</a>
         </nav>
 
-        <!-- Larger logo with improved styling -->
         <img src="StickerRoo12.png" alt="StickerRoo Logo" class="logo">
-
-        <!-- Page title and description -->
         <h1>Get Ready to Stick with Style!</h1>
-        <p>StickerRoo provides the hottest premium sticker packs for messaging. All packs are hand-made and delivered straight to you. Whether you're looking for fun, creativity, or personalization, StickerRoo has the perfect pack for you. Sign up now to be one of the first to experience StickerRoo and receive a free sticker pack on launch!</p>
+        <p class="intro-text">StickerRoo provides the hottest premium sticker packs for messaging. All packs are hand-made and delivered straight to you. Whether you're looking for fun, creativity, or personalization, StickerRoo has the perfect pack for you. Sign up now to be one of the first to experience StickerRoo and receive a free sticker pack on launch!</p>
 
-        <!-- Sign-up form -->
         <form action="https://formspree.io/f/xqakbwrn" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -43,7 +38,6 @@
 
             <label for="year_of_birth">Year of Birth:</label>
             <select id="year_of_birth" name="year_of_birth" required>
-                <!-- JavaScript to set year options from 1900 to current year -->
                 <script>
                     const yearSelect = document.getElementById('year_of_birth');
                     const currentYear = new Date().getFullYear();
@@ -63,8 +57,8 @@
             <select id="favorite_sticker_pack" name="favorite_sticker_pack" onchange="toggleOtherInput()" required>
                 <option value="Celebrity">Celebrity</option>
                 <option value="Video Games">Video Games</option>
-                <option value="TV & Movies">TV & Movies</option>
                 <option value="Sports">Sports</option>
+                <option value="TV & Movies">TV & Movies</option>
                 <option value="Comics">Comics</option>
                 <option value="Other">Other</option>
             </select>
@@ -74,21 +68,6 @@
 
             <button type="submit">Sign Up for Early Access</button>
         </form>
-
-        <!-- Blog post section -->
-        <section class="blog-section">
-            <h2>Featured Blog Posts</h2>
-            <div class="blog-post">
-                <h3>How Stickers Can Spice Up Your Conversations</h3>
-                <p>Discover how stickers add personality and fun to your daily messages. Whether you're a fan of emojis or just starting with stickers, learn how to make your chats more exciting!</p>
-                <a href="#">Read More</a>
-            </div>
-            <div class="blog-post">
-                <h3>The Art of Handmade Stickers</h3>
-                <p>Go behind the scenes at StickerRoo and see how each sticker pack is crafted with love and attention to detail. Meet the artists who make our stickers so unique!</p>
-                <a href="#">Read More</a>
-            </div>
-        </section>
     </div>
 
     <script>
