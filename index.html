@@ -20,6 +20,12 @@
 </head>
 <body>
     <div class="container">
+        <!-- Navigation links to About and FAQ pages -->
+        <nav class="navbar">
+            <a href="about.html">About Us</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+
         <!-- Larger logo with improved styling -->
         <img src="StickerRoo12.png" alt="StickerRoo Logo" class="logo">
 
@@ -57,8 +63,8 @@
             <select id="favorite_sticker_pack" name="favorite_sticker_pack" onchange="toggleOtherInput()" required>
                 <option value="Celebrity">Celebrity</option>
                 <option value="Video Games">Video Games</option>
-                <option value="Sports">Sports</option>
                 <option value="TV & Movies">TV & Movies</option>
+                <option value="Sports">Sports</option>
                 <option value="Comics">Comics</option>
                 <option value="Other">Other</option>
             </select>
@@ -68,6 +74,21 @@
 
             <button type="submit">Sign Up for Early Access</button>
         </form>
+
+        <!-- Blog post section -->
+        <section class="blog-section">
+            <h2>Featured Blog Posts</h2>
+            <div class="blog-post">
+                <h3>How Stickers Can Spice Up Your Conversations</h3>
+                <p>Discover how stickers add personality and fun to your daily messages. Whether you're a fan of emojis or just starting with stickers, learn how to make your chats more exciting!</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-post">
+                <h3>The Art of Handmade Stickers</h3>
+                <p>Go behind the scenes at StickerRoo and see how each sticker pack is crafted with love and attention to detail. Meet the artists who make our stickers so unique!</p>
+                <a href="#">Read More</a>
+            </div>
+        </section>
     </div>
 
     <script>
