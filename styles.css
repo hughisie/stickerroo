@@ -32,7 +32,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 650px;
     width: 100%;
     background-color: #fff;
     padding: 40px;
@@ -42,21 +42,22 @@ body {
 }
 
 .logo {
-    max-width: 180px;
+    max-width: 300px;
     margin: 0 auto 20px;
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     color: #333;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 p {
     font-size: 1rem;
     color: #555;
     margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 form label {
