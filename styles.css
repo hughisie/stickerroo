@@ -20,11 +20,23 @@ body {
 .container {
     max-width: 650px;
     width: 100%;
-    background-color: #000; /* Setting container background to black */
+    background-color: #000; /* Container background remains black */
     padding: 40px;
     border-radius: 12px;
     text-align: center;
     margin-top: 20px;
+}
+
+/* Centered Logo Section */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 750px;
 }
 
 /* Navigation styling */
@@ -47,13 +59,6 @@ body {
 
 .navbar a:hover {
     background-color: #333;
-}
-
-/* Logo styling - 3x larger and centered */
-.logo {
-    max-width: 750px;
-    display: block;
-    margin: 0 auto 20px; /* Centering logo */
 }
 
 /* Main heading styling */
